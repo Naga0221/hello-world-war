@@ -1,5 +1,4 @@
 FROM openjdk:8-jre-alpine3.7
-WORKDIR /user/src/
-COPY /var/lib/jenkins/workspace/CICD/dist/hello-world.war .
+COPY /var/lib/jenkins/workspace/CICD/target/hello-world.war .
 EXPOSE 80
 ENTRYPOINT ["java", "-jar", "./app.jar"]
