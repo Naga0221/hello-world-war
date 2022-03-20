@@ -1,5 +1,5 @@
 FROM openjdk:8-jre-alpine3.7
-WORKDIR /root/
-COPY /var/lib/jenkins/workspace/CICD/dist/*.war .
-EXPOSE 8123
+WORKDIR /user/src/
+COPY /var/lib/jenkins/workspace/CICD/dist/hello-world.war .
+EXPOSE 80
 ENTRYPOINT ["java", "-jar", "./app.jar"]
